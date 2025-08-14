@@ -1,0 +1,6 @@
+services:
+  mistral-bot:
+    build: ./src
+    container_name: mistral-bot
+    restart: unless-stopped
+    env_file: .env
