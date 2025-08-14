@@ -64,6 +64,10 @@ async def process_video_note(message: Message, client: Mistral, model: str, voic
     else:
         await message.reply(lexicon_ru['pre'] + transcribed)
 
+@router.message(F.chat.type == 'private')
+async def process_unknown(message: Message):
+    await message.reply(lexicon_ru['unknown'])
+
 
 
     

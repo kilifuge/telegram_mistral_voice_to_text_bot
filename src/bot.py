@@ -1,4 +1,4 @@
-import logging, os
+import logging
 import asyncio
 
 from mistralai import Mistral
